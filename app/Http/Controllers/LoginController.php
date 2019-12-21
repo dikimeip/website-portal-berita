@@ -13,6 +13,10 @@ class LoginController extends Controller
 
     public function do_login(Request $request)
     {
-    	dd($request);
+    	if (auth()->attempt($request->only('email','password'))) {
+    		return "Ok";
+    	} else {
+    		return "Gagal";
+    	}
     }
 }
