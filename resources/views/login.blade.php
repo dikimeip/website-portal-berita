@@ -45,7 +45,8 @@
                            <h1>TRIBUN NEWS MOJOKERTO</h1>
                         </div>
                         <div class="login-form">
-                            <form action="" method="post">
+                            <form action="{{route('login')}}" method="post">
+                                {{csrf_field()}}
                                 <div class="form-group">
                                     <label>Email Address</label>
                                     <input class="au-input au-input--full" type="email" name="email" placeholder="Email">
