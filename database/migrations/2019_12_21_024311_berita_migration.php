@@ -20,7 +20,6 @@ class BeritaMigration extends Migration
             $table->string('judul');
             $table->string('author');
             $table->date('tanggal');
-            $table->string('judul');
             $table->text('isi');
             $table->string('foto');
             $table->string('top_news');
@@ -36,6 +35,6 @@ class BeritaMigration extends Migration
      */
     public function down()
     {
-        $table::dropIfExists('berita');
+        $table::dropIfExistsp('berita');
     }
 }
