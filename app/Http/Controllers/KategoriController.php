@@ -71,7 +71,8 @@ class KategoriController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = KategoriModel::find($id);
+        return view('admin.edit_kategori',compact('data'));
     }
 
     /**
