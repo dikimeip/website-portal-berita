@@ -7,7 +7,8 @@
 		<button class="btn btn-info" data-toggle="modal" data-target="#modal">TAMBAH</button>
 	</div>
 	<div class="col-md-4">
-		<form>
+		<form action="{{route('user.carikategori')}}" method="post">
+			{{csrf_field()}}
 			<div class="form-group">
 				<input type="text" name="cari" class="form-control" placeholder="Masukan Nama Kategori">
 			</div>

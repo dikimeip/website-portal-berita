@@ -104,4 +104,12 @@ class KategoriController extends Controller
             return redirect()->route('user.kategori');
         }
     }
+
+    public function search(request $request)
+    {
+        $cari = $request->get('cari');
+        $data = KategoriModel::where('nama','LIKE','%'.$cari.'%')->get();
+        return view('admin.kategori',compact('data'));
+
+    }
 }
