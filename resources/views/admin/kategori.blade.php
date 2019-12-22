@@ -14,6 +14,11 @@
 		</form>
 	</div>
 </div>
+@if(Session::has('success'))
+	<div class="alert alert-success">
+		<p>{{Session::get('success')}}</p>
+	</div>
+@endif
 <br>
 <table class="table table-striped">
 	<tr class="table-info">
@@ -44,14 +49,15 @@
 				<p><b>TAMBAH DATA KATEGORI</b></p>
 			</div>
 			<div class="modal-body">
-				<form>
+				<form action="{{route('user.do_ketagori')}}" method="post">
+					{{csrf_field()}}
 					<div class="form-group">
 						<label>Masukan Nama Kategori</label>
-						<input type="text" name="judul" class="form-control">
+						<input type="text" name="nama" class="form-control" required="">
 					</div>
 					<div class="form-group">
 						<label>Masukan Keterangan Kategori</label>
-						<input type="text" name="judul" class="form-control">
+						<textarea class="form-control" name="ket" required="" style="height: 150px"></textarea>
 					</div>
 					<input type="submit" value="SIMPAN" class="btn btn-info btn-sm">
 				</form>

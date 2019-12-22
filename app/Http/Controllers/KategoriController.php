@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\KategoriModel;
+use Session;
 
 class KategoriController extends Controller
 {
@@ -36,7 +37,19 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $KategoriModel = new KategoriModel;
+        $KategoriModel->nama = $request->nama;
+        $KategoriModel->keterangan = $request->ket;
+        $KategoriModel->status = 'aktif';
+        $KategoriModel->tanggal = date('Y-m-d');
+        $KategoriModel->save();
+        if ($KategoriModel) {
+            Session::flash('success','Success Tambah Data');
+            return redirect()->route('user.kategori');
+        } else {
+            Session::flash('success','Failed Tambah Data');
+            return redirect()->route('user.kategori');
+        }
     }
 
     /**
