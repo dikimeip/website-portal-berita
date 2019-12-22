@@ -20,5 +20,6 @@ Route::post('/wp-admin','LoginController@do_login')->name('login');
 
 Route::group(['middleware'=>'auth'],function(){
 	Route::get('/user','userController@index')->name('user');
+	Route::get('/user/kategori','KategoriController@index')->name('user.kategori');
 });
 
