@@ -8,13 +8,13 @@ class LoginController extends Controller
 {
     public function index()
     {
-    	return view('template.master');
+    	return view('login');
     }
 
     public function do_login(Request $request)
     {
     	if (auth()->attempt($request->only('email','password'))) {
-    		return "Ok";
+    		return redirect()->route('user');
     	} else {
     		return "Gagal";
     	}

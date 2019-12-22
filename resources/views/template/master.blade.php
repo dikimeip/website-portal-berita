@@ -84,6 +84,10 @@
                             <a href="chart.html">
                                 <i class="fas fa-chart-bar"></i>Berita</a>
                         </li>
+                        <li>
+                            <a href="chart.html">
+                                <i class="fas fa-chart-bar"></i>Kategori</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
