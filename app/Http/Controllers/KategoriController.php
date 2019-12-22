@@ -94,6 +94,14 @@ class KategoriController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $KategoriModel = KategoriModel::find($id);
+        $KategoriModel->delete();
+        if ($KategoriModel) {
+            Session::flash('success','Success Delete Data');
+            return redirect()->route('user.kategori');
+        } else {
+            Session::flash('success','Failed Delete Data');
+            return redirect()->route('user.kategori');
+        }
     }
 }
