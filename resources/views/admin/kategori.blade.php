@@ -9,22 +9,31 @@
 	<div class="col-md-4">
 		<form>
 			<div class="form-group">
-				<input type="text" name="cari" class="form-control">
+				<input type="text" name="cari" class="form-control" placeholder="Masukan Nama Kategori">
 			</div>
 		</form>
 	</div>
 </div>
 <br>
-<table class="table table-striped  table-success">
+<table class="table table-striped">
 	<tr class="table-info">
-		<th>NO</th>
 		<th>NAMA</th>
-		<th>KELAS</th>
+		<th>KETERANGAN</th>
+		<th>STATUS</th>
+		<th>TANGGAL</th>
+		<th>AKSI</th>
 	</tr>
+	@foreach($data as $d)
 	<tr>
-		<td>1</td>
-		<td>ANDI</td>
-		<td>3A</td>
+		<td>{{$d->nama}}</td>
+		<td>{{$d->keterangan}}</td>
+		<td>{{$d->status}}</td>
+		<td>{{$d->tanggal}}</td>
+		<td>
+			<a href="" class="btn btn-warning btn-sm">HAPUS</a>
+			<a href="" class="btn btn-info btn-sm">EDIT</a>
+		</td>
 	</tr>
+	@endforeach
 </table>
 @endsection

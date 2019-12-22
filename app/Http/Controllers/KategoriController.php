@@ -14,8 +14,8 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        //$data = KategoriModel::all();
-       return view('admin.kategori');
+        $data = KategoriModel::all();
+       return view('admin.kategori',compact('data'));
     }
 
     /**
