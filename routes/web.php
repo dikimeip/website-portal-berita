@@ -22,5 +22,6 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::get('/user','userController@index')->name('user');
 	Route::get('/user/kategori','KategoriController@index')->name('user.kategori');
 	Route::post('/user/kategori','KategoriController@store')->name('user.do_ketagori');
+	Route::get('/user/kategori/hapus/{id}','KategoriController@destroy')->name('user.hapus_kategori');
 });
 

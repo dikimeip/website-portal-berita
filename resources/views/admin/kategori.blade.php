@@ -35,7 +35,7 @@
 		<td>{{$d->status}}</td>
 		<td>{{$d->tanggal}}</td>
 		<td>
-			<a href="" class="btn btn-warning btn-sm">HAPUS</a>
+			<a href="{{route('user.hapus_kategori',$d->id)}}" onclick="return confirm('Hapus Data.?')" class="btn btn-warning btn-sm">HAPUS</a>
 			<a href="" class="btn btn-info btn-sm">EDIT</a>
 		</td>
 	</tr>
