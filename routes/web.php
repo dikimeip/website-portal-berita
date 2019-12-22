@@ -17,3 +17,8 @@ Route::get('/', function () {
 
 Route::get('/wp-admin','LoginController@index');
 Route::post('/wp-admin','LoginController@do_login')->name('login');
+
+Route::group(['middleware'=>'auth'],function(){
+
+});
+

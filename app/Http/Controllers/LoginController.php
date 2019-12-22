@@ -19,4 +19,10 @@ class LoginController extends Controller
     		return "Gagal";
     	}
     }
+
+    public function logout()
+    {
+        auth()->logout();
+        return redirect('/');
+    }
 }
