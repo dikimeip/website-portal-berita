@@ -8,7 +8,7 @@ class LoginController extends Controller
 {
     public function index()
     {
-    	return view('login');
+    	return view('template.master');
     }
 
     public function do_login(Request $request)
