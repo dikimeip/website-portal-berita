@@ -10,11 +10,11 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Ok</title>
+    <title>Dasboard</title>
 
     <!-- Fontfaces CSS-->
     <link href="{{asset('css/font-face.css')}}" rel="stylesheet" media="all">
-     <link href= "{{asset('DataTables/DataTables-1.10.20/css/jquery.dataTables.css')}}"  rel="stylesheet">
+    <link href= "{{asset('DataTables/datatables.css')}}"  rel="stylesheet">
     <link href=" {{asset('vendor/font-awesome-4.7/css/font-awesome.min.css')}} " rel="stylesheet" media="all">
     <link href=" {{asset('vendor/font-awesome-5/css/fontawesome-all.min.css')}}" rel="stylesheet" media="all">
     <link href=" {{asset('vendor/mdi-font/css/material-design-iconic-font.min.css')}}"rel="stylesheet" media="all">
@@ -75,7 +75,7 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li>
-                            <a href="">
+                            <a href="{{route('user')}}">
                                 <i class="fas fa-chart-bar"></i>Dasboard</a>
                         </li>
                          <li>
@@ -130,17 +130,9 @@
 
             <!-- MAIN CONTENT-->
             <div class="main-content">
-                <div class="section__content section__content--p30">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="overview-wrap">
-                                   @yield('isi')
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               <div class="container">
+                    @yield('isi')
+               </div>
             </div>
             <!-- END MAIN CONTENT-->
             <!-- END PAGE CONTAINER-->
