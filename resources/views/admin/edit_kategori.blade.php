@@ -12,6 +12,14 @@
 		<label>Masukan Keterangan Kategori</label>
 		<textarea class="form-control" name="ket" required="" style="height: 150px">{{$data->keterangan}}</textarea>
 	</div>
+	<div class="form-group">
+		<label>Masukan Status</label>
+		<select class="form-control" name="status">
+			<option>{{$data->status}}</option>
+			<option>aktif</option>
+			<option>disable</option>
+		</select>
+	</div>
 	<input type="submit" value="SIMPAN" class="btn btn-info btn-sm">
 </form>
 @endsection

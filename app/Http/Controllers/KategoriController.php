@@ -84,7 +84,18 @@ class KategoriController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $KategoriModel = KategoriModel::find($id);
+        $KategoriModel->nama = $request->nama;
+        $KategoriModel->keterangan = $request->ket;
+        $KategoriModel->status = $request->status;
+        $KategoriModel->save();
+        if ($KategoriModel) {
+            Session::flash('success','Success Tambah Data');
+            return redirect()->route('user.kategori');
+        } else {
+            Session::flash('success','Failed Tambah Data');
+            return redirect()->route('user.kategori');
+        }
     }
 
     /**
