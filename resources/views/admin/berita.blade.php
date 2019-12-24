@@ -21,4 +21,28 @@
 	</div>
 @endif
 <br>
+
+<table class="table table-striped">
+	<tr class="table-info">
+		<th>JUDUL</th>
+		<th>AUTHOR</th>
+		<th>KATEGORI</th>
+		<th>TANGGAL</th>
+		<th>AKSI</th>
+	</tr>
+	@foreach($data as $d)
+	<tr>
+		<td>{{$d->judul}}</td>
+		<td>{{$d->author}}</td>
+		<td>{{$d->kategori->nama}}</td>
+		<td>{{$d->tanggal}}</td>
+		<td>
+			<a href="" class="btn btn-info btn-sm">DETAIL</a>
+			<a href="" class="btn btn-warning btn-sm">HAPUS</a>
+			<a href="" class="btn btn-success btn-sm">EDIT</a>
+		</td>
+	</tr>
+	@endforeach
+</table>
+
 @endsection
