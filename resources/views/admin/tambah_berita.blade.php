@@ -13,7 +13,7 @@
 	</div>
 	<div class="form-group">
 		<label>MASUKAN ISI BERITA</label>
-		<textarea style="width:100px ,height:100px" class="form-control" name="isi"></textarea>
+		<textarea class="texteditor"></textarea>
 	</div>
 	<div class="form-group">
 		<label>MASUKAN KATEGORI</label>
