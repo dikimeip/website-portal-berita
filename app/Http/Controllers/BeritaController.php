@@ -14,7 +14,8 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        //
+        //$berita = BeritaModel::all();
+        return view('admin.berita');
     }
 
     /**

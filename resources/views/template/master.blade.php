@@ -43,7 +43,7 @@
                                 <i class="fas fa-chart-bar"></i>Dasboard</a>
                         </li>
                          <li>
-                            <a href="">
+                            <a href="{{route('user.berita')}}">
                                 <i class="fas fa-chart-bar"></i>Berita</a>
                         </li>
                         <li>
