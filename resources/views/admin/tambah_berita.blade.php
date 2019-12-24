@@ -2,18 +2,19 @@
 @section('isi')
 <h1 class="text-center">TAMBAH BERTIA</h1>
 <br>
-<form>
+<form action="{{route('user.tambahberita')}}" method="post" enctype="multipart/form-data">
+	{{csrf_field()}}
 	<div class="form-group">
 		<label>MASUKAN JUDUL BERITA</label>
-		<input type="text" name="judul" class="form-control">
+		<input type="text" name="judul" class="form-control" required="" >
 	</div>
 	<div class="form-group">
 		<label>MASUKAN AUTHOR BERITA</label>
-		<input type="text" name="author" class="form-control">
+		<input type="text" name="author" class="form-control" required="">
 	</div>
 	<div class="form-group">
 		<label>MASUKAN ISI BERITA</label>
-		<textarea class="texteditor"></textarea>
+		<textarea class="form-control" name="isi" required=""></textarea>
 	</div>
 	<div class="form-group">
 		<label>MASUKAN KATEGORI</label>
@@ -25,7 +26,7 @@
 	</div>
 	<div class="form-group">
 		<label>MASUKAN FOTO</label>
-		<input type="file" name="foto" class="form-control">
+		<input type="file" name="foto" class="form-control" required="">
 	</div>
 	<input type="submit" value="SIMPAN" class="btn btn-info">
 </form>

@@ -28,6 +28,7 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::post('/user/kategori/edit/{id}','KategoriController@update')->name('user.do_edit_kategori');
 	Route::get('/user/berita','BeritaController@index')->name('user.berita');
 	Route::get('/user/tambah_berita','BeritaController@create')->name('user.tambahberita');
+	Route::post('/user/tambah_berita','BeritaController@store')->name('user.tambahberita');
 
 });
 

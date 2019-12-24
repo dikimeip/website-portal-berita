@@ -38,7 +38,12 @@ class BeritaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $file = $request->file('foto');
+        $org = $file->getClientOriginalName();
+        $path = 'foto';
+        $file->move($path,$org);
+
+        
     }
 
     /**
