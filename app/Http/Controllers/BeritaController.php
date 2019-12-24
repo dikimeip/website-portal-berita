@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\BeritaModel;
 use App\KategoriModel;
+use Session;
 
 class BeritaController extends Controller
 {
@@ -43,7 +44,23 @@ class BeritaController extends Controller
         $path = 'foto';
         $file->move($path,$org);
 
-        
+        $BeritaModel = new BeritaModel;
+        $BeritaModel->kategori_id = $request->kategori;
+        $BeritaModel->judul = $request->judul;
+        $BeritaModel->author = $request->author;
+        $BeritaModel->tanggal = date('Y-m-d');
+        $BeritaModel->isi = $request->isi;
+        $BeritaModel->foto = $org;
+        $BeritaModel->top_news = 'disable';
+        $BeritaModel->status = 'aktif' ;
+        $BeritaModel->save();
+        if ($BeritaModel) {
+            Session::flash('success','Success Tambah Data');
+            return redirect()->route('user.berita');
+        } else {
+            Session::flash('success','Failed Tambah Data');
+            return redirect()->route('user.berita');
+        }
     }
 
     /**
