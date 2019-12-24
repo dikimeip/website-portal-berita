@@ -4,7 +4,7 @@
 <br>
 <div class="row">
 	<div class="col-md-8">
-		<a href="" class="btn btn-info">TAMBAH BERITA</a>
+		<a href="{{route('user.tambahberita')}}" class="btn btn-info">TAMBAH BERITA</a>
 	</div>
 	<div class="col-md-4">
 		<form action="" method="post">
