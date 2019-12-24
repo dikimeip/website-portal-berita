@@ -16,6 +16,14 @@
 		<textarea style="width:100px ,height:100px" class="form-control" name="isi"></textarea>
 	</div>
 	<div class="form-group">
+		<label>MASUKAN KATEGORI</label>
+		<select name="kategori" class="form-control">
+			@foreach($data as $d)
+			<option value="{{$d->id}}">{{$d->nama}}</option>
+			@endforeach
+		</select>
+	</div>
+	<div class="form-group">
 		<label>MASUKAN FOTO</label>
 		<input type="file" name="foto" class="form-control">
 	</div>

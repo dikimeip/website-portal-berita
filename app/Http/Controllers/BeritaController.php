@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\BeritaModel;
+use App\KategoriModel;
 
 class BeritaController extends Controller
 {
@@ -25,7 +26,8 @@ class BeritaController extends Controller
      */
     public function create()
     {
-        return view('admin.tambah_berita');
+        $data=KategoriModel::all();
+        return view('admin.tambah_berita',compact('data'));
     }
 
     /**
