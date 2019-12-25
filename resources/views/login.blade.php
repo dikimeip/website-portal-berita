@@ -57,6 +57,11 @@
                                 </div>
                                 <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
                             </form>
+                            @if(Session::has('success'))
+                            <div class="alert alert-info">
+                                <p>{{Session::get('success')}}</p>
+                            </div>
+                            @endif
                         </div>
                     </div>
                 </div>

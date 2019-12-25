@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Session;
 
 class LoginController extends Controller
 {
@@ -16,7 +17,8 @@ class LoginController extends Controller
     	if (auth()->attempt($request->only('email','password'))) {
     		return redirect()->route('user');
     	} else {
-    		return "Gagal";
+    		Session::flash('success','Username Atau Password Salah');
+            return redirect()->route('user.login');
     	}
     }
 
