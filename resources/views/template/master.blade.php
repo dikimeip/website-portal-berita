@@ -50,6 +50,10 @@
                             <a href="{{route('user.kategori')}}">
                                 <i class="fas fa-chart-bar"></i>Kategori</a>
                         </li>
+                        <li>
+                            <a href="{{route('user.logout')}}">
+                                <i class="fas fa-chart-bar"></i>Logout</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -79,7 +83,7 @@
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__footer">
-                                                <a href="#">
+                                                <a href="{{route('user.logout')}}">
                                                     <i class="zmdi zmdi-power"></i>Logout</a>
                                             </div>
                                         </div>
