@@ -116,7 +116,27 @@ class BeritaController extends Controller
                 return redirect()->route('user.berita');
             }
         } else {
-           
+            $file = $request->file('foto');
+            $org = $file->getClientOriginalName();
+            $path = 'foto';
+            $file->move($path,$org);
+
+            $BeritaModel = BeritaModel::find($id) ;
+            $BeritaModel->kategori_id = $request->kategori;
+            $BeritaModel->judul = $request->judul;
+            $BeritaModel->author = $request->author;
+            $BeritaModel->isi = $request->isi;
+            $BeritaModel->foto = $org;
+            $BeritaModel->top_news =  $request->news;
+            $BeritaModel->status =  $request->status;
+            $BeritaModel->save();
+            if ($BeritaModel) {
+                Session::flash('success','Success Ubah Data');
+                return redirect()->route('user.berita');
+            } else {
+                Session::flash('success','Failed Ubah Data');
+                return redirect()->route('user.berita');
+            }
         }
     }
 
