@@ -71,7 +71,7 @@ class BeritaController extends Controller
      */
     public function show($id)
     {
-        
+        return view('admin.show_berita');
     }
 
     /**
