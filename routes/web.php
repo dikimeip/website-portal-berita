@@ -33,5 +33,6 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::get('/user/edit_berita/{id}','BeritaController@edit')->name('user.edit_berita');
 	Route::post('/user/edit_berita/{id}','BeritaController@update')->name('user.edit_berita');
 	Route::get('/user/hapus_berita/{id}','BeritaController@destroy')->name('user.hapus_berita');
+	Route::post('/user/berita/cari','BeritaController@cari')->name('user.cari_berita');
 });
 

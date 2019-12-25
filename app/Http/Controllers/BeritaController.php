@@ -20,6 +20,13 @@ class BeritaController extends Controller
         return view('admin.berita',compact('data'));
     }
 
+    public function cari(Request $request)
+    {
+        $key = $request->get('cari');
+        $data = BeritaModel::where('judul','LIKE','%'.$key.'%')->get();
+        return view('admin.berita',compact('data')) ;
+    }
+
     /**
      * Show the form for creating a new resource.
      *
