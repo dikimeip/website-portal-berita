@@ -71,7 +71,8 @@ class BeritaController extends Controller
      */
     public function show($id)
     {
-        return view('admin.show_berita');
+        $data = BeritaModel::find($id);
+        return view('admin.show_berita',compact('data'));
     }
 
     /**
