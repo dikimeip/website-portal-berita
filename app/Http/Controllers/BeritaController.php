@@ -51,7 +51,7 @@ class BeritaController extends Controller
         $BeritaModel->tanggal = date('Y-m-d');
         $BeritaModel->isi = $request->isi;
         $BeritaModel->foto = $org;
-        $BeritaModel->top_news = 'disable';
+        $BeritaModel->top_news = 'aktif';
         $BeritaModel->status = 'aktif' ;
         $BeritaModel->save();
         if ($BeritaModel) {
@@ -84,7 +84,8 @@ class BeritaController extends Controller
     public function edit($id)
     {
         $data = KategoriModel::all();
-        return view('admin.edit_berita',compact('data'));
+        $berita = BeritaModel::find($id);
+        return view('admin.edit_berita',compact('data','berita'));
     }
 
     /**

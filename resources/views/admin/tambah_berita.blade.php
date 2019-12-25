@@ -6,7 +6,7 @@
 	{{csrf_field()}}
 	<div class="form-group">
 		<label>MASUKAN JUDUL BERITA</label>
-		<input type="text" name="judul" class="form-control" required="" >
+		<input type="text" name="judul" class="form-control" required=""  >
 	</div>
 	<div class="form-group">
 		<label>MASUKAN AUTHOR BERITA</label>
