@@ -83,7 +83,8 @@ class BeritaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = KategoriModel::all();
+        return view('admin.edit_berita',compact('data'));
     }
 
     /**

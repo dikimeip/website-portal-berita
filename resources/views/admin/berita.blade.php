@@ -39,7 +39,7 @@
 		<td>
 			<a href="{{route('user.detail_berita',$d->id)}}" class="btn btn-info btn-sm">DETAIL</a>
 			<a href="" class="btn btn-warning btn-sm">HAPUS</a>
-			<a href="" class="btn btn-success btn-sm">EDIT</a>
+			<a href="{{route('user.edit_berita',$d->id)}}" class="btn btn-success btn-sm">EDIT</a>
 		</td>
 	</tr>
 	@endforeach
