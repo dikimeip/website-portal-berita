@@ -2,7 +2,7 @@
 @section('isi')
 <h1 class="text-center">EDIT BERITA</h1>
 <br>
-<form action="" method="post" enctype="multipart/form-data">
+<form action="{{route('user.edit_berita',$berita->id)}}" method="post" enctype="multipart/form-data">
 	{{csrf_field()}}
 	<div class="form-group">
 		<label>MASUKAN JUDUL BERITA</label>
@@ -28,11 +28,11 @@
 	<div class="form-group">
 		<label>MASUKAN FOTO</label>
 		<img src="{{asset('foto/'.$berita->foto)}}">
-		<input type="file" name="foto" class="form-control" required="">
+		<input type="file" name="foto" class="form-control">
 	</div>
 	<div class="form-group">
 		<label>TOP NEWS</label>
-		<select name="top_news" class="form-control">
+		<select name="news" class="form-control">
 			<option>{{$berita->top_news}}</option>
 			<option>aktif</option>
 			<option>tidak aktif</option>

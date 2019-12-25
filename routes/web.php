@@ -31,6 +31,7 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::post('/user/tambah_berita','BeritaController@store')->name('user.tambahberita');
 	Route::get('/user/detail_berita/{id}','BeritaController@show')->name('user.detail_berita');
 	Route::get('/user/edit_berita/{id}','BeritaController@edit')->name('user.edit_berita');
+	Route::post('/user/edit_berita/{id}','BeritaController@update')->name('user.edit_berita');
 
 });
 
