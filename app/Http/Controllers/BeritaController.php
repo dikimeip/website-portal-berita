@@ -148,6 +148,15 @@ class BeritaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $BeritaModel = BeritaModel::find($id);
+        $BeritaModel->delete();
+         if ($BeritaModel) {
+            Session::flash('success','Success Hapus Data');
+            return redirect()->route('user.berita');
+        } else {
+            Session::flash('success','Failed Hapus Data');
+            return redirect()->route('user.berita');
+        }
+
     }
 }
