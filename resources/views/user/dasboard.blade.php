@@ -295,6 +295,7 @@
 			</div>
 		</div>
 		<div class="col-md-4">
+			<!-- new news -->
 			<b class="label label-info"><b>NEW NEWS</b></b>
 			<hr>
 			<div class="row">
@@ -347,6 +348,60 @@
 					</div>
 				</div>
 			</div>
+			<!-- top news -->
+			<b class="label label-info"><a href=""><b>TOP NEWS</b></a></b>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="panel panel-default">
+					  <div class="panel-body">
+					  	<img style="width: 100%;height: 100px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}"><br>
+					  	<p><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit</b></p>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="panel panel-default">
+					  <div class="panel-body">
+					  	<img style="width: 100%;height: 100px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}"><br>
+					  	<p><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit</b></p>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="panel panel-default">
+					  <div class="panel-body">
+					  	<img style="width: 100%;height: 100px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}"><br>
+					  	<p><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit</b></p>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="panel panel-default">
+					  <div class="panel-body">
+					  	<img style="width: 100%;height: 100px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}"><br>
+					  	<p><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit</b></p>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="panel panel-default">
+					  <div class="panel-body">
+					  	<img style="width: 100%;height: 100px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}"><br>
+					  	<p><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit</b></p>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="panel panel-default">
+					  <div class="panel-body">
+					  	<img style="width: 100%;height: 100px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}"><br>
+					  	<p><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit</b></p>
+					  </div>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </div>
