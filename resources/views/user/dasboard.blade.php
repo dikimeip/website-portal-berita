@@ -29,11 +29,10 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
     	<li>
-    		<form>
-	    		<div class="form-group" style="padding-top: 10px">
-	    			<input type="text" name="cari" placeholder="Masukan Nama Berita" class="form-control">
-	    		</div>
-	    	</form>
+    		 <form class="form-inline" style="margin-top: 5px">
+			    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			  </form>
     	</li>
     	
     </ul>
@@ -47,6 +46,10 @@
 			<div class="panel panel-default">
 			  <div class="panel-body">
 			  	<img style="width: 250px;height: 200px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
+			  	<h4>judul berita</h4>
+			  	<p><b>ADMIN 12-06-2019</b></p>
+			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			  	tempor incididunt ut labore et dolore magna aliqua.</p>
 			  </div>
 			</div>
 		</div>
@@ -54,6 +57,10 @@
 			<div class="panel panel-default">
 			  <div class="panel-body">
 			  	<img style="width: 250px;height: 200px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
+			  	<h4>judul berita</h4>
+			  	<p><b>ADMIN 12-06-2019</b></p>
+			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			  	tempor incididunt ut labore et dolore magna aliqua.</p>
 			  </div>
 			</div>
 		</div>
@@ -61,6 +68,10 @@
 			<div class="panel panel-default">
 			  <div class="panel-body">
 			  	<img style="width: 250px;height: 200px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
+			  	<h4>judul berita</h4>
+			  	<p><b>ADMIN 12-06-2019</b></p>
+			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			  	tempor incididunt ut labore et dolore magna aliqua.</p>
 			  </div>
 			</div>
 		</div>
@@ -68,6 +79,10 @@
 			<div class="panel panel-default">
 			  <div class="panel-body">
 			  	<img style="width: 250px;height: 200px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
+			  	<h4>judul berita</h4>
+			  	<p><b>ADMIN 12-06-2019</b></p>
+			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			  	tempor incididunt ut labore et dolore magna aliqua.</p>
 			  </div>
 			</div>
 		</div>
