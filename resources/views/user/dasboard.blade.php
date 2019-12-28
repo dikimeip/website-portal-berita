@@ -5,23 +5,6 @@
 	 <link href=" {{asset('css/bootstrap.min.css')}}" rel="stylesheet" media="all">
 </head>
 <body>
-
-<!-- <nav class="navbar navbar-inverse">
-	<div class="container">
-		<div class="navbar-header">
-			<div class="navbar-brand">
-				<b>DC NEWS</b>
-			</div>
-		</div>
-		<ul class="nav navbar-nav">
-			<li>HOME</li>
-			<li>EKONOMI</li>
-			<li>OLAHRAGA</li>
-			<li>POLITIK</li>
-			<li>TEKNOLOGI</li>
-		</ul>
-	</div>
-</nav> -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -56,8 +39,42 @@
     </ul>
   </div>
 </nav>
-    <script src="{{asset('vendor/jquery-3.2.1.min.js')}} "></script>
+<div class="container" style="margin-top: 80px">
+	<b>BREAKING NEWS</b>
+	<hr>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-default">
+			  <div class="panel-body">
+			  	<img style="width: 250px;height: 200px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-default">
+			  <div class="panel-body">
+			  	<img style="width: 250px;height: 200px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-default">
+			  <div class="panel-body">
+			  	<img style="width: 250px;height: 200px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-default">
+			  <div class="panel-body">
+			  	<img style="width: 250px;height: 200px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
+			  </div>
+			</div>
+		</div>
+	</div>
+</div>
 
+<script src="{{asset('vendor/jquery-3.2.1.min.js')}} "></script>
  <script src="{{asset('vendor/bootstrap-4.1/popper.min.js')}} "></script>
  <script src="{{asset('vendor/bootstrap-4.1/bootstrap.min.js')}} "></script>
 </body>
