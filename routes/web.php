@@ -11,10 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
+Route::get('/','clientController@index');
 Route::get('/wp-admin','LoginController@index')->name('user.login');
 Route::post('/wp-admin','LoginController@do_login')->name('login');
 Route::get('/logout','LoginController@logout')->name('user.logout');
