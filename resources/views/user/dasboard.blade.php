@@ -94,6 +94,7 @@
 			<div class="panel">
 				<div class="panel">
 					<div class="row">
+						<!-- ekonomi -->
 						<div class="col-md-3">
 							<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
 						</div>
@@ -196,7 +197,53 @@
 					  	tempor incididunt ut labore et dolore magna aliqua.</p>
 					</div>
 				</div>
-
+				<!-- politik -->
+				<b class="label label-info"><b>POLITIK NEWS</b></b>
+				<hr>
+				<div class="row">
+					<div class="col-md-3">
+						<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
+					</div>
+					<div class="col-md-9">
+						<h4>judul berita</h4>
+					  	<p><b>ADMIN 12-06-2019</b></p>
+					  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					  	tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
+					</div>
+					<div class="col-md-9">
+						<h4>judul berita</h4>
+					  	<p><b>ADMIN 12-06-2019</b></p>
+					  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					  	tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
+					</div>
+					<div class="col-md-9">
+						<h4>judul berita</h4>
+					  	<p><b>ADMIN 12-06-2019</b></p>
+					  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					  	tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
+					</div>
+					<div class="col-md-9">
+						<h4>judul berita</h4>
+					  	<p><b>ADMIN 12-06-2019</b></p>
+					  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					  	tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</div>
 				
 			</div>
 		</div>
