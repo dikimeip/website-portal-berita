@@ -42,7 +42,7 @@
                 <div class="login-wrap">
                     <div class="login-content">
                         <div class="login-logo">
-                           <h1>TRIBUN NEWS MOJOKERTO</h1>
+                           <h1>DC NEWS</h1>
                         </div>
                         <div class="login-form">
                             <form action="{{route('login')}}" method="post">
