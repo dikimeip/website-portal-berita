@@ -8,7 +8,7 @@
 		<div class="panel panel-default">
 			<a href="" style="color: black">
 			  <div class="panel-body">
-			  	<img style="width: 250px;height: 200px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
+			  	<img style="width: 250px;height: 200px" class="img-rounded img-responsive" src="{{asset('foto/'.$s->foto)}}">
 			  	<h4>{{$s->judul}}</h4>
 			  	<p><b>{{$s->author}} {{$s->tanggal}} </b></p>
 			  	<p>{{substr($s->isi,0,100)}}</p>

@@ -14,7 +14,8 @@ class clientController extends Controller
      */
     public function index()
     {
-        $semua = BeritaModel::orderBy('created_at','ASC')
+        $semua = BeritaModel::orderBy('created_at','DESC')
+                ->where('status','aktif')
                 ->take(4)
                 ->get();
         return view('user.dasboard',compact('semua')) ;

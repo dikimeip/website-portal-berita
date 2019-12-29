@@ -16,7 +16,12 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        $data = BeritaModel::paginate(10);
+        // BeritaModel::orderBy('created_at','DESC')
+        //         ->take(4)
+        //         ->get();
+        $data = BeritaModel::orderBy('created_at','DESC')
+                ->where('status','aktif')
+                ->paginate(10);
         return view('admin.berita',compact('data'));
     }
 
