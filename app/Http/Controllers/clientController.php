@@ -23,12 +23,17 @@ class clientController extends Controller
                     ->where('status','aktif')
                     ->take(4)
                     ->get();
-         $olahraga =  BeritaModel::orderBy('created_at','DESC')
+        $olahraga =  BeritaModel::orderBy('created_at','DESC')
                     ->where('kategori_id',5)
                     ->where('status','aktif')
                     ->take(4)
                     ->get();
-        return view('user.dasboard',compact('semua','ekonomi','olahraga')) ;
+        $politik =  BeritaModel::orderBy('created_at','DESC')
+                    ->where('kategori_id',6)
+                    ->where('status','aktif')
+                    ->take(4)
+                    ->get();
+        return view('user.dasboard',compact('semua','ekonomi','olahraga','politik')) ;
     }
 
     /**
