@@ -28,14 +28,16 @@
 					<br>
 				@foreach ($ekonomi as $e)
 					<div class="row">
-						<div class="col-md-3">
-							<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/'.$e->foto)}}">
-						</div>
-						<div class="col-md-9">
-							<h4>{{$e->judul}}</h4>
-						  	<p><b>{{$e->author}} {{$e->tanggal}} </b></p>
-						  	<p>{{substr($s->isi,0,100)}}</p>
-						</div>
+						<a href="" style="color:black">
+							<div class="col-md-3">
+								<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/'.$e->foto)}}">
+							</div>
+							<div class="col-md-9">
+								<h4>{{$e->judul}}</h4>
+							  	<p><b>{{$e->author}} {{$e->tanggal}} </b></p>
+							  	<p>{{substr($s->isi,0,100)}}</p>
+							</div>
+						</a>
 					</div>
 				@endforeach
 			</div>
