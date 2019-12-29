@@ -38,7 +38,12 @@ class clientController extends Controller
                     ->where('status','aktif')
                     ->take(4)
                     ->get();
-        return view('user.dasboard',compact('semua','ekonomi','olahraga','politik','tekno')) ;
+         $tops =  BeritaModel::orderBy('created_at','DESC')
+                    ->where('status','aktif')
+                    ->where('top_news','aktif')
+                    ->take(8)
+                    ->get();
+        return view('user.dasboard',compact('semua','ekonomi','olahraga','politik','tekno','tops')) ;
     }
 
     /**

@@ -59,7 +59,7 @@ class BeritaController extends Controller
         $BeritaModel->tanggal = date('Y-m-d');
         $BeritaModel->isi = $request->isi;
         $BeritaModel->foto = $org;
-        $BeritaModel->top_news = 'aktif';
+        $BeritaModel->top_news = 'tidak aktif';
         $BeritaModel->status = 'aktif' ;
         $BeritaModel->save();
         if ($BeritaModel) {
