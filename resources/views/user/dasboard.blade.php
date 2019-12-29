@@ -45,50 +45,20 @@
 			<br>
 			<b class="label label-info"><b>OLAHRAGA NEWS</b></b>
 			<hr>
-			<div class="row">
-				<div class="col-md-3">
-					<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
+			@foreach($olahraga as $o)
+				<div class="row">
+					<a href="" style="color: black">
+						<div class="col-md-3">
+							<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
+						</div>
+						<div class="col-md-9">
+							<h4>{{$o->judul}}</h4>
+						  	<p><b>{{$o->author}} {{$o->tanggal}}</b></p>
+						  	<p>{{substr($o->isi,0,100)}}</p>
+						</div>
+					</a>
 				</div>
-				<div class="col-md-9">
-					<h4>judul berita</h4>
-				  	<p><b>ADMIN 12-06-2019</b></p>
-				  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				  	tempor incididunt ut labore et dolore magna aliqua.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
-				</div>
-				<div class="col-md-9">
-					<h4>judul berita</h4>
-				  	<p><b>ADMIN 12-06-2019</b></p>
-				  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				  	tempor incididunt ut labore et dolore magna aliqua.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
-				</div>
-				<div class="col-md-9">
-					<h4>judul berita</h4>
-				  	<p><b>ADMIN 12-06-2019</b></p>
-				  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				  	tempor incididunt ut labore et dolore magna aliqua.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
-				</div>
-				<div class="col-md-9">
-					<h4>judul berita</h4>
-				  	<p><b>ADMIN 12-06-2019</b></p>
-				  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				  	tempor incididunt ut labore et dolore magna aliqua.</p>
-				</div>
-			</div>
+			@endforeach
 			<!-- politik -->
 			<br>
 			<b class="label label-info"><b>POLITIK NEWS</b></b>
