@@ -44,5 +44,8 @@
 	</tr>
 	@endforeach
 </table>
+<br>
+<p class="text-center">{{$data->links()}}</p>
+
 
 @endsection
