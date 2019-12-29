@@ -5,16 +5,16 @@
 <div class="row">
 @foreach ($semua as $s)
 	<div class="col-md-3">
-		<div class="panel panel-default">
-			<a href="" style="color: black">
+		<a href="" style="color: black;text-decoration: none;">
+			<div class="panel panel-default">
 			  <div class="panel-body">
 			  	<img style="width: 250px;height: 200px" class="img-rounded img-responsive" src="{{asset('foto/'.$s->foto)}}">
 			  	<h4>{{$s->judul}}</h4>
 			  	<p><b>{{$s->author}} {{$s->tanggal}} </b></p>
 			  	<p>{{substr($s->isi,0,100)}}</p>
 			  </div>
-			</a>
-		</div>
+			</div>
+		</a>
 	</div>
 @endforeach
 </div>
