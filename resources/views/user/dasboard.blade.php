@@ -29,71 +29,15 @@
 				@foreach ($ekonomi as $e)
 					<div class="row">
 						<div class="col-md-3">
-							<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
+							<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/'.$e->foto)}}">
 						</div>
 						<div class="col-md-9">
-							<h4>judul berita</h4>
-						  	<p><b>ADMIN 12-06-2019</b></p>
-						  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						  	tempor incididunt ut labore et dolore magna aliqua.</p>
+							<h4>{{$e->judul}}</h4>
+						  	<p><b>{{$e->author}} {{$e->tanggal}} </b></p>
+						  	<p>{{substr($s->isi,0,100)}}</p>
 						</div>
 					</div>
 				@endforeach
-				<!-- <div class="row">
-					<div class="col-md-3">
-						<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
-					</div>
-					<div class="col-md-9">
-						<h4>judul berita</h4>
-					  	<p><b>ADMIN 12-06-2019</b></p>
-					  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					  	tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-3">
-						<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
-					</div>
-					<div class="col-md-9">
-						<h4>judul berita</h4>
-					  	<p><b>ADMIN 12-06-2019</b></p>
-					  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					  	tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-3">
-						<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
-					</div>
-					<div class="col-md-9">
-						<h4>judul berita</h4>
-					  	<p><b>ADMIN 12-06-2019</b></p>
-					  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					  	tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-3">
-						<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
-					</div>
-					<div class="col-md-9">
-						<h4>judul berita</h4>
-					  	<p><b>ADMIN 12-06-2019</b></p>
-					  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					  	tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-3">
-						<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
-					</div>
-					<div class="col-md-9">
-						<h4>judul berita</h4>
-					  	<p><b>ADMIN 12-06-2019</b></p>
-					  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					  	tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-				</div> -->
 			</div>
 			<!-- olahraga -->
 			<br>
