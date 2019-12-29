@@ -3,7 +3,7 @@
 <b class="label label-info"><b>BREAKING NEWS</b></b>
 <hr>
 <div class="row">
-<?php foreach ($semua as $s): ?>
+@foreach ($semua as $s)
 	<div class="col-md-3">
 		<div class="panel panel-default">
 			<a href="" style="color: black">
@@ -16,7 +16,7 @@
 			</a>
 		</div>
 	</div>
-<?php endforeach ?>
+@endforeach
 </div>
 <div class="row">
 	<div class="col-md-8">
@@ -24,9 +24,10 @@
 		<hr>
 		<div class="panel">
 			<div class="panel">
-				<div class="row">
-					<!-- ekonomi -->
+				<!-- ekonomi -->
 					<br>
+
+				<div class="row">
 					<div class="col-md-3">
 						<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
 					</div>

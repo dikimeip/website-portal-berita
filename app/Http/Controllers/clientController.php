@@ -18,7 +18,12 @@ class clientController extends Controller
                 ->where('status','aktif')
                 ->take(4)
                 ->get();
-        return view('user.dasboard',compact('semua')) ;
+        $ekonomi =  BeritaModel::orderBy('created_at','DESC')
+                    ->where('kategori_id',4)
+                    ->where('status','aktif')
+                    ->take(4)
+                    ->get();
+        return view('user.dasboard',compact('semua','ekonomi')) ;
     }
 
     /**
