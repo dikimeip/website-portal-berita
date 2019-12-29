@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\BeritaController;
+use App\BeritaModel;
 
 class clientController extends Controller
 {
@@ -14,7 +14,10 @@ class clientController extends Controller
      */
     public function index()
     {
-        return view('user.dasboard') ;
+        $semua = BeritaModel::orderBy('created_at','ASC')
+                ->take(4)
+                ->get();
+        return view('user.dasboard',compact('semua')) ;
     }
 
     /**
