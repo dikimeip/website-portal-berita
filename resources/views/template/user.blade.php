@@ -48,20 +48,15 @@
 		<div class="row" style="margin-top: 40px;margin-bottom: 40px">
 			<div class="col-md-4">
 				<p class="text-center"><b>ABOUT DC NEWS</b></p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>{{$about->tentang}}</p>
 			</div>
 			<div class="col-md-4">
 				<p class="text-center"><b>KONTAK DC NEWS</b></p>
 				<ul>
-					<li>Whatsapp : 085123123</li>
-					<li>Phone : 032123454</li>
-					<li>Email : dc_news@dc.com</li>
-					<li>Alamat : Dsn Mlati Ds Simongagrok Kec Dawarblandong Kab Mojokerto</li>
+					<li>Whatsapp : {{$about->kontak}}</li>
+					<li>Phone : {{$about->kontak}}</li>
+					<li>Email : {{$about->email}}</li>
+					<li>Alamat : {{$about->alamat}}</li>
 				</ul>
 			</div>
 			<div class="col-md-4">

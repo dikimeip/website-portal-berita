@@ -44,7 +44,8 @@ class clientController extends Controller
                     ->where('top_news','aktif')
                     ->take(8)
                     ->get();
-        return view('user.dasboard',compact('semua','ekonomi','olahraga','politik','tekno','tops')) ;
+        $about = TentangModel::find(1);
+        return view('user.dasboard',compact('semua','ekonomi','olahraga','politik','tekno','tops','about')) ;
     }
 
     /**
