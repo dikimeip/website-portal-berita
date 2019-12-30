@@ -51,6 +51,10 @@
                                 <i class="fas fa-chart-bar"></i>Kategori</a>
                         </li>
                         <li>
+                            <a href="{{route('user.about')}}">
+                                <i class="fas fa-chart-bar"></i>About</a>
+                        </li>
+                        <li>
                             <a href="{{route('user.logout')}}">
                                 <i class="fas fa-chart-bar"></i>Logout</a>
                         </li>

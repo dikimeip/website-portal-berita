@@ -14,7 +14,8 @@ class AboutController extends Controller
      */
     public function index()
     {
-        //
+        $data = TentangModel::find(1);
+        return view('admin.edit_about',compact('data')) ;
     }
 
     /**
