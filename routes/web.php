@@ -34,5 +34,7 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::get('/user/hapus_berita/{id}','BeritaController@destroy')->name('user.hapus_berita');
 	Route::post('/user/berita/cari','BeritaController@cari')->name('user.cari_berita');
 	Route::get('/user/about','AboutController@index')->name('user.about');
+	Route::post('/user/about/edit/{id}','AboutController@update')->name('user.edit_about');
+
 });
 

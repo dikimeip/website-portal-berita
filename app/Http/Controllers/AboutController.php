@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\TentangModel;
+use Session;
 
 class AboutController extends Controller
 {
@@ -70,7 +71,19 @@ class AboutController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $TentangModel = TentangModel::find($id);
+        $TentangModel->tentang = $request->tentang;
+        $TentangModel->kontak = $request->kontak;
+        $TentangModel->alamat = $request->alamat;
+        $TentangModel->email = $request->email;
+        $TentangModel->save();
+        if ($TentangModel) {
+            Session::flash('success','Success Update Data');
+            return redirect()->route('user') ;
+        } else {
+            Session::flash('success','Success Update Data');
+            return redirect()->route('user') ;
+        }
     }
 
     /**
