@@ -8,3 +8,5 @@ class TentangModel extends Model
 {
     protected $table = "about";
 }
+
+
