@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\BeritaModel;
+use App\TentangModel;
 
 class clientController extends Controller
 {
