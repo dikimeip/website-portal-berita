@@ -13,6 +13,7 @@
 
 
 Route::get('/','clientController@index');
+Route::get('/user/news/{id}','clientController@show')->name('user.show_news');
 Route::get('/wp-admin','LoginController@index')->name('user.login');
 Route::post('/wp-admin','LoginController@do_login')->name('login');
 Route::get('/logout','LoginController@logout')->name('user.logout');
@@ -35,6 +36,5 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::post('/user/berita/cari','BeritaController@cari')->name('user.cari_berita');
 	Route::get('/user/about','AboutController@index')->name('user.about');
 	Route::post('/user/about/edit/{id}','AboutController@update')->name('user.edit_about');
-
 });
 

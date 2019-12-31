@@ -5,7 +5,7 @@
 <div class="row">
 @foreach ($semua as $s)
 	<div class="col-md-3">
-		<a href="" style="color: black;text-decoration: none;">
+		<a href="{{route('user.show_news',$s->id)}}" style="color: black;text-decoration: none;">
 			<div class="panel panel-default">
 			  <div class="panel-body">
 			  	<img style="width: 250px;height: 200px" class="img-rounded img-responsive" src="{{asset('foto/'.$s->foto)}}">

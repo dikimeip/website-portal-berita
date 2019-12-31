@@ -77,7 +77,8 @@ class clientController extends Controller
      */
     public function show($id)
     {
-        //
+         $about = TentangModel::find(1);
+        return view('user.detail',compact('about'));
     }
 
     /**
