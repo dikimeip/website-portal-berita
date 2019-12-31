@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\BeritaModel;
 use App\TentangModel;
 use App\KomentarModel;
+use Session;
 
 class clientController extends Controller
 {
@@ -78,13 +79,17 @@ class clientController extends Controller
      */
     public function show($id)
     {
-         $about = TentangModel::find(1);
-         $news = BeritaModel::find($id);
-          $semua = BeritaModel::orderBy('created_at','DESC')
+        $about = TentangModel::find(1);
+        $news = BeritaModel::find($id);
+        $semua = BeritaModel::orderBy('created_at','DESC')
                 ->where('status','aktif')
                 ->take(6)
                 ->get();
-        return view('user.detail',compact('about','news','semua'));
+        $komen = KomentarModel::orderBy('created_at','DESC')
+                ->where('berita_id',$id)
+                ->where('status','aktif')
+                ->get();
+        return view('user.detail',compact('about','news','semua','komen'));
     }
 
     /**
@@ -117,9 +122,11 @@ class clientController extends Controller
         $komen->save();
 
         if ($komen) {
+            Session::flash('success','Komentar berhasil ditamahkan');
             return redirect()->back();
         } else {
-            return redirect()->route('/');
+            Session::flash('success','Komentar gagal ditamahkan');
+            return redirect()->back();
         }
     }
 

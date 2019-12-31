@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/','clientController@index');
+Route::get('/','clientController@index')->name('user.show');
 Route::get('/user/news/{id}','clientController@show')->name('user.show_news');
 Route::post('/user/news/{id}','clientController@update')->name('user.komentar_news');
 Route::get('/wp-admin','LoginController@index')->name('user.login');

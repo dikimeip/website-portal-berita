@@ -8,6 +8,22 @@
 		<img style="width: 600px;height: 300px" src="{{asset('foto/'.$news->foto)}}">
 		<p style="margin-top: 40px;">{{$news->isi}}</p>
 		<br><hr>
+		@if(Session::has('success'))
+		<div class="alert alert-info">
+			<p>{{Session::get('success')}}</p>
+		</div>
+		@endif
+		<br>
+		@foreach($komen as $k)
+			<div class="panel panel-info">
+				<div class="panel-body">
+					<p><b>{{$k->nama}}</b></p>
+					<p>{{$k->tanggal}}</p>
+					<p>{{$k->keterangan}}</p>
+					<hr>		
+				</div>
+			</div>
+		@endforeach
 		<p><b>LEAVE A REPLAY</b></p>
 		<form action="{{route('user.komentar_news',$news->id)}}" method="post">
 			{{csrf_field()}}

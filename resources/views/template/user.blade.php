@@ -8,10 +8,10 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">DC NEWS</a>
+      <a class="navbar-brand" href="{{route('user.show')}}">DC NEWS</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">HOME</a></li>
+      <li class="active"><a href="{{route('user.show')}}">HOME</a></li>
       <li><a href="#">EKONOMI</a></li>
       <li class="dropdown">
       	<a href="#" data-toggle="dropdown" class="dropdown-toggle">
