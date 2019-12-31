@@ -22,6 +22,17 @@
 			<input type="submit" value="KIRIM" class="btn btn-info">
 		</form>
 	</div>
+	<div class="col-md-4">
+		<b class="label label-info"><b>BERITA TERBARU</b></b>
+		<hr>
+		@foreach($semua as $a)
+		<a href="" style="text-decoration: none;color: black">
+			<p><b>{{$a->judul}}</b></p>
+			<p>{{$a->tanggal}}</p>
+			<br>
+		</a>
+		@endforeach
+	</div>
 </div>
 
 @endsection

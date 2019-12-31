@@ -79,7 +79,11 @@ class clientController extends Controller
     {
          $about = TentangModel::find(1);
          $news = BeritaModel::find($id);
-        return view('user.detail',compact('about','news'));
+          $semua = BeritaModel::orderBy('created_at','DESC')
+                ->where('status','aktif')
+                ->take(6)
+                ->get();
+        return view('user.detail',compact('about','news','semua'));
     }
 
     /**
