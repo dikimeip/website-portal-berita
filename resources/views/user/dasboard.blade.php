@@ -28,7 +28,7 @@
 					<br>
 				@foreach ($ekonomi as $e)
 					<div class="row">
-						<a href="" style="color:black">
+						<a href="{{route('user.show_news',$e->id)}}" style="color:black">
 							<div class="col-md-3">
 								<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/'.$e->foto)}}">
 							</div>
@@ -47,7 +47,7 @@
 			<hr>
 			@foreach($olahraga as $o)
 				<div class="row">
-					<a href="" style="color: black">
+					<a href="{{route('user.show_news',$o->id)}}" style="color: black">
 						<div class="col-md-3">
 							<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
 						</div>
@@ -65,7 +65,7 @@
 			<hr>
 			@foreach($politik as $p)
 			<div class="row">
-				<a href="" style="color: black">
+				<a href="{{route('user.show_news',$p->id)}}" style="color: black">
 					<div class="col-md-3">
 						<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/'.$p->foto)}}">
 					</div>
@@ -83,7 +83,7 @@
 			<hr>
 			@foreach($tekno as $tek)
 			<div class="row">
-				<a href="" style="color: black">
+				<a href="{{route('user.show_news',$tek->id)}}" style="color: black">
 					<div class="col-md-3">
 						<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/'.$tek->foto)}}">
 					</div>
@@ -104,7 +104,7 @@
 		<hr>
 		<div class="row">
 		@foreach($tops as $tp)
-			<a href="" style="color: black">
+			<a href="{{route('user.show_news',$tp->id)}}" style="color: black">
 				<div class="col-md-6">
 					<div class="panel panel-default">
 					  <div class="panel-body">
