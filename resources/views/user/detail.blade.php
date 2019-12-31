@@ -9,12 +9,13 @@
 		<p style="margin-top: 40px;">{{$news->isi}}</p>
 		<br><hr>
 		<p><b>LEAVE A REPLAY</b></p>
-		<form>
+		<form action="{{route('user.komentar_news')}}" method="post">
 			<div class="form-group">
-				<textarea class="form-control" name="isi" placeholder="Masukan Komentar"></textarea>
+				<textarea class="form-control" name="isi" required="" placeholder="Masukan Komentar"></textarea>
 			</div>
 			<div class="form-group">
-				<input type="text" name="nama" class="form-control" placeholder="Masukan Username">
+				<input type="text" name="nama" required=""  class="form-control" placeholder="Masukan Username">
+				<input type="text" name="nama" required=""  class="form-control" value="{{$news-id}}" placeholder="Masukan Username">
 			</div>
 			<div class="form-group">
 				<input type="email" name="email" class="form-control" placeholder="Masukan Email">
