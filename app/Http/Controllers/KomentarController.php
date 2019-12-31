@@ -47,7 +47,8 @@ class KomentarController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = KomentarModel::find($id);
+        return view('admin.edit_komen',compact('data')) ;
     }
 
     /**

@@ -28,7 +28,7 @@
 		<td>{{$k->status}}</td>
 		<td>{{$k->tanggal}}</td>
 		<td>
-			<a href="" class="btn btn-info btn-sm">EDIT</a>
+			<a href="{{route('user.edit_komen',$k->id)}}" class="btn btn-info btn-sm">EDIT</a>
 			<a href="" onclick="return confirm('Hapus Komentar..??')" class="btn btn-danger btn-sm" >HAPUS</a>
 		</td>
 	</tr>
