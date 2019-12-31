@@ -51,7 +51,7 @@
                                 <i class="fas fa-chart-bar"></i>Kategori</a>
                         </li>
                          <li>
-                            <a href="">
+                            <a href="{{route('user.komen')}}">
                                 <i class="fas fa-chart-bar"></i>Komentar</a>
                         </li>
                         <li>

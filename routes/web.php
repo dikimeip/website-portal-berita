@@ -37,5 +37,7 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::post('/user/berita/cari','BeritaController@cari')->name('user.cari_berita');
 	Route::get('/user/about','AboutController@index')->name('user.about');
 	Route::post('/user/about/edit/{id}','AboutController@update')->name('user.edit_about');
+	Route::get('/komentar','KomentarController@index')->name('user.komen');
+
 });
 
