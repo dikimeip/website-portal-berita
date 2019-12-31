@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\BeritaModel;
 use App\TentangModel;
+use App\KomentarModel;
 
 class clientController extends Controller
 {
@@ -66,7 +67,7 @@ class clientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -106,7 +107,20 @@ class clientController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $komen = new KomentarModel;
+        $komen->nama = $request->nama;
+        $komen->email = $request->email;
+        $komen->keterangan = $request->isi;
+        $komen->tanggal = date('Y-m-d');
+        $komen->status = 'aktif';
+        $komen->berita_id = $id;
+        $komen->save();
+
+        if ($komen) {
+            return redirect()->back();
+        } else {
+            return redirect()->route('/');
+        }
     }
 
     /**
