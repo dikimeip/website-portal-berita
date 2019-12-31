@@ -11,4 +11,28 @@
 		</form>
 	</div>
 </div>
+<table class="table table-striped">
+	<tr class="table-info">
+		<th>NAMA</th>
+		<th>EMAIL</th>
+		<th>KOMENTAR</th>
+		<th>STATUS</th>
+		<th>TANGGAL</th>
+		<th>AKSI</th>
+	</tr>
+	@foreach($komen as $k)
+	<tr>
+		<td>{{$k->nama}}</td>
+		<td>{{$k->email}}</td>
+		<td>{{$k->keterangan}}</td>
+		<td>{{$k->status}}</td>
+		<td>{{$k->tanggal}}</td>
+		<td>
+			<a href="" class="btn btn-info btn-sm">EDIT</a>
+			<a href="" onclick="return confirm('Hapus Komentar..??')" class="btn btn-danger btn-sm" >HAPUS</a>
+		</td>
+	</tr>
+	@endforeach
+</table>
+{{$komen->links()}}
 @endsection

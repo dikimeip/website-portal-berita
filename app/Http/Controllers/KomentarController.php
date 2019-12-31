@@ -14,7 +14,8 @@ class KomentarController extends Controller
      */
     public function index()
     {
-        return view('admin.komentar') ;
+        $komen = KomentarModel::orderBy('created_at','DESC') ->paginate(10);
+        return view('admin.komentar',compact('komen')) ;
     }
 
     /**
