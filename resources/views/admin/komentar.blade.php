@@ -11,6 +11,11 @@
 		</form>
 	</div>
 </div>
+@if(Session::has('success'))
+	<div class="alert alert-success">
+		<p>{{Session::get('success')}}</p>
+	</div>
+@endif
 <table class="table table-striped">
 	<tr class="table-info">
 		<th>NAMA</th>

@@ -2,7 +2,7 @@
 @section('isi')
 <h1>EDIT KOMENTAR</h1>
 <br>
-<form action="" method="post">
+<form action="{{route('user.do_editkomen',$data->id)}}" method="post">
 	{{csrf_field()}}
 	<div class="form-group">
 		<textarea class="form-control" name="isi" readonly="">{{$data->keterangan}}</textarea>

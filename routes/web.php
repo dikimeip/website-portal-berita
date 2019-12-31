@@ -39,6 +39,6 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::post('/user/about/edit/{id}','AboutController@update')->name('user.edit_about');
 	Route::get('/komentar','KomentarController@index')->name('user.komen');
 	Route::get('/user/detail_komen/{id}','KomentarController@show')->name('user.edit_komen');
-
+	Route::post('/user/edit_komen/{id}','KomentarController@update')->name('user.do_editkomen');
 });
 

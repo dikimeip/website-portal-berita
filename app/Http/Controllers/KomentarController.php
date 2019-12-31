@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\KomentarModel;
+use Session;
 
 class KomentarController extends Controller
 {
@@ -71,7 +72,16 @@ class KomentarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $komen = KomentarModel::find($id);
+        $komen->status = $request->status;
+        $komen->save();
+        if ($komen) {
+            Session::flash('success','Update Finish');
+            return redirect()->route('user.komen') ;
+        } else {
+            Session::flash('success','Update Failed');
+            return redirect()->route('user.komen') ;
+        }
     }
 
     /**
