@@ -40,5 +40,6 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::get('/komentar','KomentarController@index')->name('user.komen');
 	Route::get('/user/detail_komen/{id}','KomentarController@show')->name('user.edit_komen');
 	Route::post('/user/edit_komen/{id}','KomentarController@update')->name('user.do_editkomen');
+	Route::get('/user/hapus_komen/{id}','KomentarController@destroy')->name('user.hapus_komen');
 });
 

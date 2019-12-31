@@ -1,16 +1,7 @@
 @extends('template.master')
 @section('isi')
 <h1 class="text-center">KOMENTAR</h1>
-<div class="row">
-	<div class="col-md-8"></div>
-	<div class="col-md-4">
-		<form>
-			<div class="form-group">
-				<input type="text" name="cari" class="form-control" placeholder="Masukan Nama User">
-			</div>
-		</form>
-	</div>
-</div>
+<br><hr>
 @if(Session::has('success'))
 	<div class="alert alert-success">
 		<p>{{Session::get('success')}}</p>
@@ -34,7 +25,7 @@
 		<td>{{$k->tanggal}}</td>
 		<td>
 			<a href="{{route('user.edit_komen',$k->id)}}" class="btn btn-info btn-sm">EDIT</a>
-			<a href="" onclick="return confirm('Hapus Komentar..??')" class="btn btn-danger btn-sm" >HAPUS</a>
+			<a href="{{route('user.hapus_komen',$k->id)}}" onclick="return confirm('Hapus Komentar..??')" class="btn btn-danger btn-sm" >HAPUS</a>
 		</td>
 	</tr>
 	@endforeach

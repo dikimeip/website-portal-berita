@@ -19,6 +19,7 @@ class KomentarController extends Controller
         return view('admin.komentar',compact('komen')) ;
     }
 
+
     /**
      * Show the form for creating a new resource.
      *
@@ -92,6 +93,14 @@ class KomentarController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $komen = KomentarModel::find($id);
+        $komen->delete();
+        if ($komen) {
+            Session::flash('success','Hapus Finish');
+            return redirect()->route('user.komen') ;
+        } else {
+            Session::flash('success','Hapus Failed');
+            return redirect()->route('user.komen') ;
+        }
     }
 }
