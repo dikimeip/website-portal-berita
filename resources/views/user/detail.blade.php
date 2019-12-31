@@ -7,6 +7,20 @@
 	<div class="col-md-8">
 		<img style="width: 600px;height: 300px" src="{{asset('foto/'.$news->foto)}}">
 		<p style="margin-top: 40px;">{{$news->isi}}</p>
+		<br><hr>
+		<p><b>LEAVE A REPLAY</b></p>
+		<form>
+			<div class="form-group">
+				<textarea class="form-control" name="isi" placeholder="Masukan Komentar"></textarea>
+			</div>
+			<div class="form-group">
+				<input type="text" name="nama" class="form-control" placeholder="Masukan Username">
+			</div>
+			<div class="form-group">
+				<input type="email" name="email" class="form-control" placeholder="Masukan Email">
+			</div>
+			<input type="submit" value="KIRIM" class="btn btn-info">
+		</form>
 	</div>
 </div>
 
