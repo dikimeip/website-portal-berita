@@ -140,4 +140,10 @@ class clientController extends Controller
     {
         //
     }
+
+    public function list($id)
+    {
+         $about = TentangModel::find(1);
+        return view('user.list',compact('about')) ;
+    }
 }

@@ -15,6 +15,7 @@
 Route::get('/','clientController@index')->name('user.show');
 Route::get('/user/news/{id}','clientController@show')->name('user.show_news');
 Route::post('/user/news/{id}','clientController@update')->name('user.komentar_news');
+Route::get('/user/list/{id}','clientController@list')->name('user.list_news');
 Route::get('/wp-admin','LoginController@index')->name('user.login');
 Route::post('/wp-admin','LoginController@do_login')->name('login');
 Route::get('/logout','LoginController@logout')->name('user.logout');
