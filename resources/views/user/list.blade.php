@@ -2,7 +2,7 @@
 @section('isi')
 <div class="row">
 	<div class="col-md-8">
-		<b class="label label-info"><b>EKONOMI NEWS</b></b>
+		<b class="label label-info"><b>LIST NEWS</b></b>
 		<hr>
 		<div class="panel">
 			<div class="panel">

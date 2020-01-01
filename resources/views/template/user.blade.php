@@ -18,14 +18,14 @@
       		OLAHRAGA <span class="caret"></span>
       	</a>
       	<ul class="dropdown-menu">
-      		<li><a href="">SEPAK BOLA</a></li>
-      		<li><a href="">BASKET</a></li>
-      		<li><a href="">TENIS</a></li>
-      		<li><a href="">VOLI</a></li>
+      		<li><a href="{{route('user.list_news',5)}}">SEPAK BOLA</a></li>
+      		<li><a href="{{route('user.list_news',8)}}">BASKET</a></li>
+      		<li><a href="{{route('user.list_news',9)}}">TENIS</a></li>
+      		<li><a href="{{route('user.list_news',10)}}">VOLI</a></li>
       	</ul>
       </li>
-      <li><a href="#">POLITIK</a></li>
-      <li><a href="">TEKNOLOGI</a></li>
+      <li><a href="{{route('user.list_news',6)}}">POLITIK</a></li>
+      <li><a href="{{route('user.list_news',7)}}">TEKNOLOGI</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
     	<li>
