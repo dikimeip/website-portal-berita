@@ -7,19 +7,20 @@
 		<div class="panel">
 			<div class="panel">
 				<!-- ekonomi -->
-					<br>
+				@foreach ($ekonomi as $e)
 					<div class="row">
-						<a href="" style="color:black">
+						<a href="{{route('user.show_news',$e->id)}}" style="color:black">
 							<div class="col-md-3">
-								<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}">
+								<img style="width: 100px;height: 100px;margin: 25px" class="img-rounded img-responsive" src="{{asset('foto/'.$e->foto)}}">
 							</div>
 							<div class="col-md-9">
-								<h4>ok</h4>
-							  	<p><b>212121 ok </b></p>
-							  	<p>loren	</p>
+								<h4>{{$e->judul}}</h4>
+							  	<p><b>{{$e->author}} {{$e->tanggal}} </b></p>
+							  	<p>{{substr($e->isi,0,100)}}</p>
 							</div>
 						</a>
 					</div>
+				@endforeach
 			</div>	
 		</div>
 	</div>
@@ -28,21 +29,18 @@
 		<b class="label label-info"><b>TOP NEWS</b></b>
 		<hr>
 		<div class="row">
-			<a href="" style="color: black">
+			@foreach($semua as $tp)
+			<a href="{{route('user.show_news',$tp->id)}}" style="color: black">
 				<div class="col-md-6">
 					<div class="panel panel-default">
 					  <div class="panel-body">
-					  	<img style="width: 100%;height: 100px" class="img-rounded img-responsive" src="{{asset('foto/admin.png')}}"><br>
-					  	<p><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					  	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					  	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					  	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					  	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					  	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</b></p>
+					  	<img style="width: 100%;height: 100px" class="img-rounded img-responsive" src="{{asset('foto/'.$tp->foto)}}"><br>
+					  	<p><b>{{substr($tp->judul,0,20)}}</b></p>
 					  </div>
 					</div>
 				</div>
 			</a>
+			@endforeach
 		</div>
 	</div>
 </div>

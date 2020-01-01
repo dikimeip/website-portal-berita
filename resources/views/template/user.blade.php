@@ -12,7 +12,7 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="{{route('user.show')}}">HOME</a></li>
-      <li><a href="{{route('user.list_news',1)}}">EKONOMI</a></li>
+      <li><a href="{{route('user.list_news',4)}}">EKONOMI</a></li>
       <li class="dropdown">
       	<a href="#" data-toggle="dropdown" class="dropdown-toggle">
       		OLAHRAGA <span class="caret"></span>

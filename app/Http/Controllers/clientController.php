@@ -144,6 +144,14 @@ class clientController extends Controller
     public function list($id)
     {
          $about = TentangModel::find(1);
-        return view('user.list',compact('about')) ;
+        $semua = BeritaModel::orderBy('created_at','DESC')
+                ->where('status','aktif')
+                ->take(6)
+                ->get();
+        $ekonomi =  BeritaModel::orderBy('created_at','DESC')
+                    ->where('kategori_id',$id)
+                    ->where('status','aktif')
+                    ->get();
+        return view('user.list',compact('about','semua','ekonomi')) ;
     }
 }
