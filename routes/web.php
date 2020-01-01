@@ -13,6 +13,7 @@
 
 
 Route::get('/','clientController@index')->name('user.show');
+Route::post('/user/news/cariberita','clientController@cari')->name('user.cr_berita');
 Route::get('/user/news/{id}','clientController@show')->name('user.show_news');
 Route::post('/user/news/{id}','clientController@update')->name('user.komentar_news');
 Route::get('/user/list/{id}','clientController@list')->name('user.list_news');

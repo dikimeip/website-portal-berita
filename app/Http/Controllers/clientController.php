@@ -154,4 +154,16 @@ class clientController extends Controller
                     ->get();
         return view('user.list',compact('about','semua','ekonomi')) ;
     }
+
+    public function cari(Request $request)
+    {
+        $key = $request->get('cari');
+        $ekonomi = BeritaModel::where('judul','LIKE','%'.$key.'%')->get();
+        $about = TentangModel::find(1);
+        $semua = BeritaModel::orderBy('created_at','DESC')
+                ->where('status','aktif')
+                ->take(6)
+                ->get();
+        return view('user.list',compact('about','ekonomi','semua')) ;
+    }
 }
